@@ -105,5 +105,5 @@ topEntity _ = pack (a0, a1, pc) where
 -- | Output verification
 expectedOutput :: Signal (Word, Word, Word) -> Signal Bool
 expectedOutput = outputVerifier $(v [(0,0,0) :: (Unsigned 4, Unsigned 4, Unsigned 4), 
-    (0,0,1),  (1,15,2), (2,14,3), (2,14,1), (2,14,2), (3,13,3), (3,13,1) ])
+    (0,0,1), (1,15,2), (2,14,3), (2,14,1), (2,14,2), (3,13,3), (3,13,1) ])
 
