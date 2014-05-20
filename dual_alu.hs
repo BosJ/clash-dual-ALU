@@ -87,14 +87,14 @@ blockRom :: forall n m a . (KnownNat n, KnownNat m, Pack a, Default a)
     -> Vec n a               -- ^ Initial values
     -> Signal (Unsigned m)   -- ^ Read address r
     -> Signal a              -- ^ Value of the blockRom at address r from the previous clock cycle
-blockRom n inp rd = pack $ (bram' <^> binit) rd
+blockRom n inp rd = pack $ (brom' <^> binit) rd
   where
     binit :: (Vec n a,a)
     binit = (inp,def)
 
-    bram' :: (Vec n a,a) -> Unsigned m -> (((Vec n a),a),a)
-    bram' (ram,o) r = ((ram,o'),o)
-      where o' = ram ! r
+    brom' :: (Vec n a,a) -> Unsigned m -> (((Vec n a),a),a)
+    brom' (rom,o) r = ((rom,o'),o)
+      where o' = rom ! r
 
 -- | Initialize top entity component
 topEntity :: Signal Word -> Signal (Word, Word, Word)
