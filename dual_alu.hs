@@ -9,7 +9,7 @@ Stability   : experimental
 Portability : non-portable (experimental)
   
 Minimal dual ALU example with 'blockRom' 
-Evaluate with: > sampleN 9 $ expectedOutput (topEntity 1)
+Evaluate as: > sampleN 9 $ expectedOutput (topEntity 1)
 
 CLaSHi, version 0.3.1 (using clash-lib, version 0.3.1)
 http://christiaanb.github.io/clash2/
