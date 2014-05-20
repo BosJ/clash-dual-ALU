@@ -18,7 +18,6 @@ http://christiaanb.github.io/clash2/
 module DualALU where
 
 import CLaSH.Prelude
-import Data.Maybe
 
 -- | Type synonyms
 type Word      = Unsigned 4
