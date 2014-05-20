@@ -91,18 +91,18 @@ blockRom n inp rd = pack $ (brom' <^> binit) rd
     binit :: (Vec n a,a)
     binit = (inp,def)
 
-    brom' :: (Vec n a,a) -> Unsigned m -> (((Vec n a),a),a)
-    brom' (rom,o) r = ((rom,o'),o)
+    brom' :: (Vec n a, a) -> Unsigned m -> (((Vec n a), a), a)
+    brom' (rom, o) r = ((rom, o'), o)
       where o' = rom ! r
 
 -- | Initialize top entity component
 topEntity :: Signal Word -> Signal (Word, Word, Word)
 topEntity _ = pack (a0, a1, pc) where
-    (a0, a1, pc) = (processor <^> (0,0,0)) (unpack instr)
+    (a0, a1, pc) = (processor <^> (0, 0, 0)) (unpack instr)
     instr = blockRom d4 (vreverse program) pc 
 
 -- | Output verification
 expectedOutput :: Signal (Word, Word, Word) -> Signal Bool
-expectedOutput = outputVerifier $(v [(0,0,0) :: (Unsigned 4, Unsigned 4, Unsigned 4), 
-    (0,0,1), (1,15,2), (2,14,3), (2,14,1), (2,14,2), (3,13,3), (3,13,1) ])
+expectedOutput = outputVerifier $(v [(0, 0, 0) :: (Unsigned 4, Unsigned 4, Unsigned 4), 
+    (0, 0, 1), (1, 15, 2), (2, 14, 3), (2, 14, 1), (2, 14, 2), (3, 13, 3), (3, 13, 1) ])
 
