@@ -36,9 +36,9 @@ instance Default Instr where def = A1 BRZ (Imm 0) (Imm 0)
 -- | Program instructions
 program :: Vec 4 (Instr, Instr)
 program = (A0 ADD (Imm 0) (Imm 1), A1 ADD (Imm 0) (Imm 15)) :>
-          (A0 ADD Reg0    (Imm 1), A1 SUB Reg1    (Imm 1)) :> 
-          (A0 ADD Reg0    (Imm 0), A1 BRZ Reg1    (Imm 0)) :> 
-          (A0 ADD Reg0    (Imm 0), A1 BRZ (Imm 0) (Imm 1)) :> Nil
+          (A0 ADD Reg0    (Imm 1), A1 SUB Reg1    (Imm 1))  :> 
+          (A0 ADD Reg0    (Imm 0), A1 BRZ Reg1    (Imm 0))  :> 
+          (A0 ADD Reg0    (Imm 0), A1 BRZ (Imm 0) (Imm 1))  :> Nil
 
 -- | Default decoder output
 nullcode :: MachCode
