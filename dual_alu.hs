@@ -88,8 +88,8 @@ blockRom :: forall n m a . (KnownNat n, KnownNat m, Pack a, Default a)
     -> Signal a              -- ^ Value of the blockRom at address r from the previous clock cycle
 blockRom n inp rd = pack $ (brom' <^> binit) rd
   where
-    binit :: (Vec n a,a)
-    binit = (inp,def)
+    binit :: (Vec n a, a)
+    binit = (inp, def)
 
     brom' :: (Vec n a, a) -> Unsigned m -> (((Vec n a), a), a)
     brom' (rom, o) r = ((rom, o'), o)
