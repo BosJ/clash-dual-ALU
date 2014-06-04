@@ -2,7 +2,7 @@
 
 {-|
 Module      : DualALU
-Copyright   : (c) Jaco Bos, 2014
+Copyright   : Jaco Bos, 2014
 License     : see libraries/base/LICENSE
 Maintainer  : University of Twente
 Stability   : experimental
@@ -10,6 +10,9 @@ Portability : non-portable (experimental)
   
 Minimal dual ALU example with 'blockRom' 
 Evaluate as: > sampleN 9 $ expectedOutput (topEntity 1)
+
+In Questa-SIM: one can preset the 'blockRom',
+see the "mem load" commands in the Questa-SIM reference manual
 
 CLaSHi, version 0.3.1 (using clash-lib, version 0.3.1)
 http://christiaanb.github.io/clash2/
