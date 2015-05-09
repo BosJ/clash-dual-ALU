@@ -1,7 +1,7 @@
 CλaSH dual ALU processor
 ==============
 
-A simple synthesizable example of a dual-ALU processor in less than 100 lines of code to get an idea of how a processor can be described with CλaSH. Sub-blocks in a conceptual schematic (see pdf) are identified and have direct relations to corresponding CλaSH functions.
+A simple synthesizable example of a dual-ALU processor in less than 100 lines of code to get an idea of how a processor can be described with CλaSH. Sub-blocks in a conceptual schematic (see schematic below) are identified and have direct relations to corresponding CλaSH functions.
 
 ![dual-alu](https://cloud.githubusercontent.com/assets/7501668/7552237/c7ecc540-f6a9-11e4-89b4-79526755ebd7.png)
 
