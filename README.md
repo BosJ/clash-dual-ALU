@@ -3,6 +3,8 @@ ClaSH-dual-ALU
 
 A simple synthesizable example of a dual-ALU processor in less than 100 lines of code to get an idea of how a processor can be described with CλaSH. Sub-blocks in a conceptual schematic (see pdf) are identified and have direct relations to corresponding CλaSH functions.
 
+![dual-alu](https://cloud.githubusercontent.com/assets/7501668/7552219/d9ab8c40-f6a8-11e4-972e-2f18ca6e32ca.png)
+
 Below first lines of the dual-ALU processor description, a module name is defined and the CλaSH library is imported. Two type synonyms are defined, `Word` is used to set a data width of 4 bits and the `ProcState` type is used to explicitly name the 3-tuple of `Words` to denote the processor state which are the registers. Using a type synonym can be used to easily adjust the data width in the future. Furthermore, algebraic data types (ADTs) are defined for the opcodes, operands, instructions and control values. These type definitions define a very small embedded (assembly) language. 
 
 ```haskell
