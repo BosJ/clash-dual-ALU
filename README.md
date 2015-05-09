@@ -1,4 +1,4 @@
-ClaSH-dual-ALU
+CλaSH-dual-ALU
 ==============
 
 A simple synthesizable example of a dual-ALU processor in less than 100 lines of code to get an idea of how a processor can be described with CλaSH. Sub-blocks in a conceptual schematic (see pdf) are identified and have direct relations to corresponding CλaSH functions.
