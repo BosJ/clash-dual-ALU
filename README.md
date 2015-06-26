@@ -126,5 +126,7 @@ expected value:
 ```
 
 All code listings combined can be translated by CλaSH to VHDL.
-
 http://www.clash-lang.org/
+
+This example was created as part of my Master's thesis titled "Synthesizable Specification of a VLIW Processor in the Functional Hardware Description Language CλaSH".
+http://purl.utwente.nl/essays/66086
